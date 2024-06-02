@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Link</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+</head>
+<body>
+
+    <form action="connect.php" method="post">
+    <div class="container">
+        <h1>Pass Link</h1>
+        
+        <div class="pass">
+            <div class="inputbox1">
+                <input type="text" class="passbox1" id="passbox1" placeholder="Enter Website Name" name="Website_Name">
+            </div>
+            <div class="inputbox">
+                
+                <input type="text" class="passbox"  id="passbox" placeholder="Your Password" name="Password">
+                <span id="copyicon" class="material-symbols-outlined"> content_copy</span>
+            </div>
+        </div>
+        
+        <button id="clearbtn" type="button" class="clearbtn">
+            Clear
+        </button>
+        
+
+        <input type="range" min="1" max="20" value="8" id="inputslider">
+
+        <div class="row">
+        <p>Password Length</p>
+        <span id="slidervalue"></span>
+        </div>
+
+        <div class="row">
+        <p>Password Strength</p>
+        <span id="strength"></span>
+        </div>
+
+        <div class="row">
+            <label for="lowercase">Include Lowercase (a-z)</label>
+            <input type="checkbox" name="lowercase" id="lowercase" checked >
+            <!-- we can write checked after id so every box is already checked -->
+        </div>
+        <div class="row">
+            <label for="uppercase">Include Uppercase (A-Z)</label>
+            <input type="checkbox" name="uppercase" id="uppercase" checked>
+        </div>
+        <div class="row">
+            <label for="numbers">Include Digits (0-9)</label>
+            <input type="checkbox" name="numbers" id="numbers" checked>
+        </div>
+        <div class="row">
+            <label for="symbols">Include Symbols (@^!*_%)</label>
+            <input type="checkbox" name="symbols" id="symbols" checked>
+        </div>
+       
+        <div class="pass">
+            <button id="genbtn" type="button" class="genbtn">
+                Generate Password
+            </button>
+            <input type="submit" name="submit" value="Save Password" class="genbtn">
+            <!-- <button id="clearbtn" type="button" class="clearbtn">
+                Clear
+            </button> -->
+        </div>
+        
+    </div>
+</form>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
